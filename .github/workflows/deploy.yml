@@ -44,9 +44,13 @@ jobs:
         env:
           HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          HETZNER_DNS_APITOKEN: ${{ secrets.HETZNER_DNS_APITOKEN }}
         run: |
           pulumi login
           pulumi stack select temp-stack
+          pulumi config set hcloud:token $HCLOUD_TOKEN --secret
+          pulumi config set hetzner:dnsApiToken $HETZNER_DNS_APITOKEN --secret
+
 
       # Provision the server with Pulumi
       - name: Provision HCloud server
