@@ -7,6 +7,8 @@
     },
     "dependencies": {
         "@pulumi/github": "^4.8.1",
+        "@pulumi/hcloud": "file:sdks/hcloud",
+        "@pulumi/hetzner": "file:sdks/hetzner",
         "@pulumi/pulumi": "^3.113.0"
     }
 }

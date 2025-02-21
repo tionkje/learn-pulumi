@@ -1,0 +1,7 @@
+environment:
+  - xenodochial-niobium-tarsier/dev
+config:
+  hcloud:token:
+    secure: AAABAJHGNv3ziK5aF6BxJYU6P26GEmqjbILH3sSsSQFiPi60s7N9Lm9QQOjdxHqED9s/vdnW0QdrjN74kWpdqi/WuQSIXnJ8Y8DA7iuhTtQFrMcAVN8ROPNESRCnbjQv
+  hetzner:dnsApiToken:
+    secure: AAABAHI1e/ppNE/QXOtNwlEA0UAFVyTRHgU+EjHVfjkM35YnjDB8kDZPw1z2s6vK7iBOoi9xkY/H/+9GtDgO9w==
