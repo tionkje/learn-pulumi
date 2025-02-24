@@ -43,7 +43,7 @@ jobs:
         run: |
           pulumi login
           pulumi stack init temp-stack-${{ github.run_id }}
-          pulumi stack select temp-stack
+          pulumi stack select temp-stack-${{ github.run_id }}
           pulumi config set hcloud:token $HCLOUD_TOKEN --secret
           pulumi config set hetzner:dnsApiToken $HETZNER_DNS_APITOKEN --secret
 
