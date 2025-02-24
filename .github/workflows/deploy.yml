@@ -41,6 +41,7 @@ jobs:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           HETZNER_DNS_APITOKEN: ${{ secrets.HETZNER_DNS_APITOKEN }}
         run: |
+          pulumi install
           pulumi login
           pulumi stack init temp-stack-${{ github.run_id }}
           pulumi stack select temp-stack-${{ github.run_id }}
