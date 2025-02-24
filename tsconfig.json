@@ -2,8 +2,8 @@
     "compilerOptions": {
         "strict": true,
         "outDir": "bin",
-        "target": "es2020",
-        "module": "commonjs",
+        "target": "esnext",
+        "module": "esnext",
         "moduleResolution": "node",
         "sourceMap": true,
         "experimentalDecorators": true,
