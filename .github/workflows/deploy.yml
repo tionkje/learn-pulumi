@@ -32,11 +32,6 @@ jobs:
           pulumi plugin install resource hcloud v1.10.0
 
 
-      # Install Ansible
-      - name: Install Ansible
-        run: |
-          python -m pip install --upgrade pip
-          pip install ansible
 
 
       # Configure Pulumi
@@ -47,9 +42,11 @@ jobs:
           HETZNER_DNS_APITOKEN: ${{ secrets.HETZNER_DNS_APITOKEN }}
         run: |
           pulumi login
+          pulumi stack init temp-stack-${{ github.run_id }}
           pulumi stack select temp-stack
           pulumi config set hcloud:token $HCLOUD_TOKEN --secret
           pulumi config set hetzner:dnsApiToken $HETZNER_DNS_APITOKEN --secret
+
 
 
       # Provision the server with Pulumi
@@ -63,6 +60,13 @@ jobs:
       #     IP=$(pulumi stack output serverIp)
       #     echo "::set-output name=server_ip::$IP"
       #
+       
+      # Install Ansible
+      - name: Install Ansible
+        run: |
+          python -m pip install --upgrade pip
+          pip install ansible
+
       # # Add the server IP to the Ansible inventory
       # - name: Create Ansible inventory
       #   run: |
