@@ -1,6 +1,6 @@
 {
     "name": "xenodochial-niobium-tarsier",
-    "main": "index.ts",
+    "main": "bin/index.js",
     "devDependencies": {
         "@types/node": "^18",
         "typescript": "^5.0.0"

@@ -40,6 +40,11 @@ jobs:
           pulumi plugin install resource hcloud v1.10.0
 
 
+      - name: build
+        run: |
+          pnpm install
+          pnpm tsc
+
 
 
       # Configure Pulumi
