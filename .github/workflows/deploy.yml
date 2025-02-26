@@ -23,10 +23,10 @@ jobs:
       - name: Install node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '20.11.1'
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: npm install -g pnpm@8.15.8
 
       # Install Pulumi
       - name: Install Pulumi
@@ -56,7 +56,8 @@ jobs:
         run: |
           pulumi install
           pulumi login
-          pulumi stack init temp-stack-${{ github.run_id }}
+          pulumi stack select dev
+          # pulumi stack init temp-stack-${{ github.run_id }}
           # pulumi stack select temp-stack-${{ github.run_id }}
           # pulumi config set hcloud:token $HCLOUD_TOKEN --secret
           # pulumi config set hetzner:dnsApiToken $HETZNER_DNS_APITOKEN --secret

@@ -1,2 +1,4 @@
 config:
   pulumi:template: typescript
+  hetzner:dnsApiToken:
+    secure: AAABAMPkJAdh7Fcj7n/P68+/PCVvrQ4JW+oiRY5IzRp3dcymn7Frbft8cjljWZgygqA9cW3Ctx1AwF9kloTzeQ==
