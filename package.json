@@ -6,6 +6,7 @@
         "typescript": "^5.0.0"
     },
     "dependencies": {
+        "@pulumi/hetzner": "file:sdks/hetzner",
         "@pulumi/pulumi": "^3.113.0"
     }
 }
