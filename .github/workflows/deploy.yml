@@ -3,7 +3,7 @@ name: Deploy to HCloud
 on:
   push:
     branches:
-      - main  # Trigger on pushes to the main branch
+      - main_2  # Trigger on pushes to the main branch
 
 jobs:
   deploy:
