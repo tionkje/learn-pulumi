@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@pulumi/hcloud':
+    specifier: ^1.22.0
+    version: 1.22.0(typescript@5.7.3)
   '@pulumi/hetzner':
     specifier: file:sdks/hetzner
     version: file:sdks/hetzner(typescript@5.7.3)
@@ -435,6 +438,17 @@ packages:
 
   /@protobufjs/utf8@1.1.0:
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
+    dev: false
+
+  /@pulumi/hcloud@1.22.0(typescript@5.7.3):
+    resolution: {integrity: sha512-LdNiPEDL5GzVC9nsAJhjE4a9UKla77M7LKMSYFHr3KEKjW2lJAnUxR11vuNP8LdjP9hfk/B3cs3miH/Qs0dvJw==}
+    dependencies:
+      '@pulumi/pulumi': 3.152.0(typescript@5.7.3)
+    transitivePeerDependencies:
+      - bluebird
+      - supports-color
+      - ts-node
+      - typescript
     dev: false
 
   /@pulumi/pulumi@3.152.0(typescript@5.7.3):

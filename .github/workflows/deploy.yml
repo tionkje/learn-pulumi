@@ -51,7 +51,7 @@ jobs:
       - name: Configure Pulumi
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-          # HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
+          HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
           HETZNER_DNS_APITOKEN: ${{ secrets.HETZNER_DNS_APITOKEN }}
         run: |
           pulumi install
@@ -59,7 +59,7 @@ jobs:
           # pulumi stack select dev
           pulumi stack init temp-stack-${{ github.run_id }}
           pulumi stack select temp-stack-${{ github.run_id }}
-          # pulumi config set hcloud:token $HCLOUD_TOKEN --secret
+          pulumi config set hcloud:token $HCLOUD_TOKEN --secret
           pulumi config set hetzner:dnsApiToken $HETZNER_DNS_APITOKEN --secret
 
 

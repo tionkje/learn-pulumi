@@ -2,3 +2,5 @@ config:
   pulumi:template: typescript
   hetzner:dnsApiToken:
     secure: AAABAMPkJAdh7Fcj7n/P68+/PCVvrQ4JW+oiRY5IzRp3dcymn7Frbft8cjljWZgygqA9cW3Ctx1AwF9kloTzeQ==
+  hcloud:token:
+    secure: AAABABT6QYjctTkLixV+MY4MdRhV3bGFr1X8aiwZ+z5wWC3fJ6aO/p3IiVSSwWOudwQYI37uLENB8UGQFtdJG4ihSpll+d5dHVZm9MwBb75GGQ+Yreboe9qoNyIeXULq
