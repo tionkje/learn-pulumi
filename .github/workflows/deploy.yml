@@ -68,6 +68,7 @@ jobs:
       - name: Provision HCloud server
         run: pulumi up --yes
 
+
       # Get the server IP from Pulumi output
       # - name: Get server IP
       #   id: get-ip
@@ -97,6 +98,9 @@ jobs:
       #     echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
       #     chmod 600 ~/.ssh/id_rsa
       #     ansible-playbook -i inventory playbook.yml --user=root
+      #
+      - name: Pauze
+        run: sleep 50
       
       - name: Destroy HCloud server
         if: always()
