@@ -22,4 +22,4 @@ async function makeRecord(name: string, type: string, value: string|pulumi.Outpu
   );
 }
 
-makeRecord('test', 'A', '127.0.0.4');
+makeRecord('test', 'A', '127.0.0.5');
